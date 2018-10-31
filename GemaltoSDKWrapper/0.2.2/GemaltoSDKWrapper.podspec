@@ -9,9 +9,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   s.swift_version    = '4.2'
-  
-  s.ios.vendored_frameworks = 'miniDriver.framework'
-
+  s.ios.vendored_frameworks = s.name.to_s + '.framework', 'miniDriver.framework'
   s.source           = { :http => s.homepage.to_s + '/raw/master/Gemalto/Wrapper/builds/' + s.name.to_s + '_' + s.version.to_s + '.zip' }
   s.exclude_files = "Classes/Exclude"
 
